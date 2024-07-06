@@ -35,7 +35,7 @@
         regex_search('vault_version: [^\n]*') | regex_replace('.*\"([^\"]+)\".*', '\\1') }}"
       when: not ansible_check_mode
 
-    - name: "print latest vaultwarden webvault release"
+    - name: "Print latest vaultwarden webvault release"
       ansible.builtin.debug:
         msg: "{{ vaultwarden_webvault_remote_version }}"
       when: not ansible_check_mode
