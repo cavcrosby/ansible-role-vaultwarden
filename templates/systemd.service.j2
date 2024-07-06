@@ -3,6 +3,7 @@
 [Unit]
 Description =  VaultWarden (https://github.com/dani-garcia/vaultwarden)
 After = network.target postgresql.service mysql.service
+{% if vaultwarden_required_service is defined %} Required = {{ vaultwarden_required_service }} {% endif %}
 
 [Service]
 User = vaultwarden
@@ -10,7 +11,7 @@ Group = vaultwarden
 ExecStart = {{ vaultwarden_directory }}/vaultwarden
 # Set reasonable connection and process limits
 LimitNOFILE=1048576
-LimitNPROC=64
+LimitNPROC=128
 # Isolate vaultwarden from the rest of the system
 PrivateTmp=true
 PrivateDevices=true
