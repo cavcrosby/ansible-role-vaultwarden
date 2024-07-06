@@ -57,6 +57,7 @@ At least 1 GB of RAM (2GB recommended), the rustc compiler will compile bitwarde
     vaultwarden_configure: yes
     vaultwarden_port: "443"
     vaultwarden_build_backend: "sqlite,postgresql"
+    vaultwarden_required_service: "postgresql.service"  # add this if postgresql starts to slow, this will make systemd wait
     admin_token: !vault |
       $ANSIBLE_VAULT;1.1;AES256
       ...
