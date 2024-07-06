@@ -11,7 +11,7 @@ Group = vaultwarden
 ExecStart = {{ vaultwarden_directory }}/vaultwarden
 # Set reasonable connection and process limits
 LimitNOFILE=1048576
-LimitNPROC=128
+LimitNPROC={{ vaultwarden_proc_limit | default(128) }}
 # Isolate vaultwarden from the rest of the system
 PrivateTmp=true
 PrivateDevices=true
