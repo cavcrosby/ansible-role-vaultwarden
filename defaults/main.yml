@@ -10,3 +10,4 @@ vaultwarden_datadir: "{{ vaultwarden_directory }}/data"
 vaultwarden_encryption_key: ""
 vaultwarden_force_encryption_key: false
 vaultwarden_systemd: "{{ ansible_service_mgr == 'systemd' }}"
+vaultwarden_proc_limit: "128"

@@ -49,6 +49,7 @@ At least 1 GB of RAM (2GB recommended), the rustc compiler will compile bitwarde
 | `vaultwarden_force_encryption_key` | Force changing encryption key if it already exists (DANGEROUS!) | `false` |
 | `vaultwarden_systemd` | Manage systemd service | `{{ ansible_service_mgr == 'systemd' }}` |
 | `vaultwarden_required_service` | Make Systemd wait for other service before starting vaultwarden | `undefined` |
+| `vaultwarden_proc_limit` | Specify the LimitNPROC for the systemd service file | `128` |
 *(\*)Starting from `vaultwarden_version: 1.17.0`: defaults to `sqlite,mysql,postgresql`, before: defaults to `sqlite`*
 
 ## Example Playbook
