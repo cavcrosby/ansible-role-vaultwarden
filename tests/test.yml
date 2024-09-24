@@ -5,4 +5,4 @@
   vars:
     vaultwarden_configure: false
   roles:
-    - ansible-role-vaultwarden
+    - jenstimmerman.vaultwarden
